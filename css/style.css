@@ -32,6 +32,7 @@
 	padding: .5rem;
 	align-items: center;
 	border-right: 1px solid lightgray;	
+	height: 4rem;
 }
 .profile-sup{
 	display: flex;
@@ -40,6 +41,7 @@
 	padding: .5rem;
 	align-items: center;
 	border-right: 1px solid lightgray;
+	height: 4rem;
 }
 .imagine{
 	flex: 0 0 50%;
@@ -65,15 +67,20 @@
 	padding: 2rem 1rem;
 	display: flex;
 	justify-content: left;
+	height:8rem
 
 }
 .notifica {
 	color: rgb(97, 200, 248);
 	background-color: white;
-	border: 5px solid white;
-	border-radius: 20px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
 	font-size: 1.5rem;
-	margin-right: .5rem;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .chat-list{
 	display: flex;
@@ -84,13 +91,30 @@
 
 }
 .ricerca{
-	background-color: white;
+	background-color: rgb(245, 240, 240);
 	padding: .5rem;
+	height:3rem;
+	display: flex;
+	
 }
 .search-bar{
-	width: 100%;
+	width: 80%;
+	height: 2rem;
+	border:.5px solid rgb(179, 179, 179);
+	color: rgb(191, 191, 191);
+	padding: .5rem;
 }
+.search-lens{
+	width: 20%;
+	height: 2rem;
+	background-color: white;
+	border:.5px solid rgb(179, 179, 179);
+	color: rgb(191, 191, 191);
+}
+.ultimo-msg{
+	color: rgb(191, 191, 191);
 
+}
 .img-chat{
 	width: 50px;
 	border-radius: 50%;
@@ -105,7 +129,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	height: 25rem;
+	height: 27.3rem;
+	
 }
 .write-msg{
 	display: flex;
@@ -120,10 +145,12 @@
 	width: 720px;
 	height: 2rem;
 	border: rgb(240, 233, 224);
+	padding: .5rem;
 }
 .text-chat{
 	display: flex;
 	flex-direction: column;
+	overflow-y: scroll;
 
 }
 .ricevuto{

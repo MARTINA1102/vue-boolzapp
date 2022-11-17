@@ -371,12 +371,36 @@ new Vue({
             
 		],
 		selectIndex:0,
+		newMex:'',
+		
 	},
 	methods:{
 		selectedChat(index){
 			this.selectIndex=index;
+		},
+		addMex(){
+			if(this.newMex){
+				this.contacts[this.selectIndex].messages.push({
+					date:'',
+					message:this.newMex,
+					status:'sent',
+				})
+				this.newMex='';	
+				risposta={
+					date:'',
+					message:'OK',
+					status:'received',
+				};
+				setTimeout(() => this.contacts[this.selectIndex].messages.push(risposta), 1000);			
+			}
+			
+		},
+		comparaNomi(){
+			
 		}
+
 	}
+	
 	
 });
 
