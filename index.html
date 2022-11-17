@@ -21,50 +21,72 @@
 	<div id="root">
 		<div class="container-est">
 			<div class="lista-chat">
-				<div class="profile">
-					<div class="imagine"><img  class="img-logo" src="img /avatar_io.jpg" alt="logo-profile"> <span>Sofia</span></div>
-					<div class="icon">
-						<i class="fa-solid fa-circle-notch"></i>
-						<i class="fa-solid fa-message"></i>
-						<i class="fa-solid fa-ellipsis-vertical"></i>
-					</div>
-				</div>
-				<div class="ricevi-not">
-					<span class="notifica"><i class="fa-solid fa-bell-slash"></i></span>
-					<div class="testo-not">
-						<h3>Ricevi notifiche di nuovi messaggi</h3> 
-						<div><a href="!#">Attiva notifiche di testo</a></div>
-					</div>
-				</div>
-				<form class="ricerca">
-					<input class="search-bar" type="search" name="" id="" placeholder="Cerca o inizia una nuova chat">
-
-				</form>
-				<div class="list">
-					<div class="chat-list" v-for="(contact, i) in contacts">
-						<div>
-							<img class="img-chat" :src="contacts.avatar" alt="">
+				<div class="left">
+					<div class="profile">
+						<div class="imagine"><img  class="img-logo" src="img 1/avatar_io.jpg" alt="logo-profile"> <div>Sofia</div></div>
+						<div class="icon">
+							<i class="fa-solid fa-circle-notch"></i>
+							<i class="fa-solid fa-message"></i>
+							<i class="fa-solid fa-ellipsis-vertical"></i>
 						</div>
-						<div>
-							<div>{{contact.name}}</div>
-							<div>ultimo messaggio inviato</div>
+					</div>
+					<div class="ricevi-not">
+						<span class="notifica"><i class="fa-solid fa-bell-slash"></i></span>
+						<div class="testo-not">
+							<h3>Ricevi notifiche di nuovi messaggi</h3> 
+							<div><a href="!#">Attiva notifiche di testo</a></div>
 						</div>
-						
+					</div>
+					<form class="ricerca">
+						<input class="search-bar" type="search" name="" id="" placeholder="Cerca o inizia una nuova chat">
+	
+					</form>
+					<div class="list">
+						<div class="chat-list" v-for="(contact, i) in contacts">
+							
+							<img :src="contact.avatar" class="img-chat">
+							
+							<div class="riquadro-premex">
+								<div>{{contact.name}}</div>
+								<div>ultimo msg</div>
+							</div>
+							
+						</div>
+	
+					</div>
+				</div>
+				<div class="messaggio-right">
+					<div class="profile">
+						<div class="imagine">
+							<img  class="img-logo" src="img 1/avatar_io.jpg" alt="logo-profile"> 
+							<div>
+								<div>Sofia</div>
+								<div>ultimo accesso</div>
+							</div>
+							
+						</div>
+						<div class="icon">
+							<i class="fa-solid fa-magnifying-glass"></i>
+							<i class="fa-solid fa-message"></i>
+							<i class="fa-solid fa-ellipsis-vertical"></i>
+						</div>
+					</div>
+					<div class="text-chat">
+						<div class="ricevuto">testo1</div>
+						<div class="inviato">testo2</div>
+					</div>
+					<div class="write-msg">
+						<i class="fa-regular fa-face-smile"></i>
+						<form action="">
+							<input class="msg-bar" type="text" name="" id="" placeholder="Scrivi un messaggio">
+						</form>
+						<i class="fa-solid fa-microphone"></i>						
 					</div>
 
+	
+					
 				</div>
-			</div>
-			<div class="chat-grande">
-				<div class="profile">
-					<div class="imagine"><img  class="img-logo" src="img /avatar_io.jpg" alt="logo-profile"> <span>Sofia</span></div>
-					<div class="icon">
-						<i class="fa-solid fa-magnifying-glass"></i>
-						<i class="fa-solid fa-message"></i>
-						<i class="fa-solid fa-ellipsis-vertical"></i>
-					</div>
-				</div>
-
-				
+	
 			</div>
 		</div>
 	
