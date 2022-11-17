@@ -372,6 +372,7 @@ new Vue({
 		],
 		selectIndex:0,
 		newMex:'',
+		newName:'',
 		
 	},
 	methods:{
@@ -396,13 +397,20 @@ new Vue({
 			
 		},
 		comparaNomi(){
-			
-		}
+			this.contacts.forEach((ele,i)=>{
+					if (this.newName !== this.contacts[i].name.toLowerCase().slice(0, this.newName.length)) {
+						this.contacts[i].visible = false;
+					} else {
+						this.contacts[i].visible = true;
+					}
+				});
+			}
+		},
 
-	}
+	});
 	
 	
-});
+
 
 
 

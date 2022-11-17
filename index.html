@@ -37,9 +37,9 @@
 							<div><a href="!#">Attiva notifiche di testo</a></div>
 						</div>
 					</div>
-					<form class="ricerca">
+					<form @submit.prevent="comparaNomi" class="ricerca">
 						<button class="search-lens"><i class="fa-solid fa-magnifying-glass"></i></button>
-						<input @keyup.enter="comparaNomi" class="search-bar" type="search" name="" id="" placeholder="Cerca o inizia una nuova chat">
+						<input @keyup="comparaNomi" class="search-bar" type="search" name="" id="" placeholder="Cerca o inizia una nuova chat" v-model="newName">
 	
 					</form>
 					<div class="list">
