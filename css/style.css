@@ -2,16 +2,17 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
 }
 .container-est{
 	height: 100vh;
 	width: 100vw;
-	background-color: rgba(245, 245, 220, 0.9);
+	background-color: rgba(217, 217, 201, 0.809);
 	border-top:10rem solid rgb(29, 151, 143);
 	
 }
 .list{
-	height: 18.5rem;
+	height: 19.3rem;
 	overflow-y: scroll;
 }
 .lista-chat{
@@ -27,10 +28,18 @@
 .profile{
 	display: flex;
 	justify-content: space-between;
-	background-color: gray;
+	background-color: rgb(245, 240, 240);
 	padding: .5rem;
 	align-items: center;
-	
+	border-right: 1px solid lightgray;	
+}
+.profile-sup{
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(245, 240, 240);
+	padding: .5rem;
+	align-items: center;
+	border-right: 1px solid lightgray;
 }
 .imagine{
 	flex: 0 0 50%;
@@ -38,8 +47,8 @@
 	align-items: center;
 	display: flex;
 	justify-content:left;
-
 }
+
 .img-logo{
 	width: 50px;
 	border-radius: 50%;
@@ -68,6 +77,7 @@
 }
 .chat-list{
 	display: flex;
+	justify-content: space-around;
 	background-color: white;
 	border-top: 1px solid rgb(179, 179, 179);
 	padding: .5rem;
@@ -88,6 +98,7 @@
 }
 .messaggio-right{
 	flex:0 0 70%;
+	height: 10rem;
 }
 .text-chat{
 	background-image: url("../img 1/mine.jpg");
@@ -98,14 +109,17 @@
 }
 .write-msg{
 	display: flex;
-	justify-content: space-around;
-	background-color:grey;
+	justify-content: space-evenly;
+	background-color:rgb(240, 233, 224);
 	align-items: center;
-	height: 2.3rem;
-	color: lightgrey;
+	height: 3rem;
+	color: rgb(107, 107, 107);
+	font-size: 1rem;
 }
 .msg-bar{
-	width: 600px;
+	width: 720px;
+	height: 2rem;
+	border: rgb(240, 233, 224);
 }
 .text-chat{
 	display: flex;
@@ -128,4 +142,12 @@
 	width: 20rem;
 	border-radius: 10px;
 
+}
+.data{
+	display: flex;
+	justify-content: end;
+	
+}
+.active{
+	display: block;
 }

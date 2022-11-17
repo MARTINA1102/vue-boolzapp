@@ -370,6 +370,12 @@ new Vue({
 			},
             
 		],
+		selectIndex:0,
+	},
+	methods:{
+		selectedChat(index){
+			this.selectIndex=index;
+		}
 	}
 	
 });

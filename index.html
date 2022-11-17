@@ -42,25 +42,26 @@
 	
 					</form>
 					<div class="list">
-						<div class="chat-list" v-for="(contact, i) in contacts">
+						<div class="chat-list" v-for="(contact, i) in contacts"  @click="selectedChat(i)" v-if="contact.visible === true" >
 							
 							<img :src="contact.avatar" class="img-chat">
 							
 							<div class="riquadro-premex">
-								<div>{{contact.name}}</div>
-								<div>ultimo msg</div>
+								<div>{{contact.name}}</div> 
+								<div>{{ contact.messages[contact.messages.length - 1].message.slice(0,10) + "..." }}</div>
 							</div>
+							<span class="data">{{ contact.messages[contact.messages.length - 1].date.slice(10,16)}}</span>
 							
 						</div>
 	
 					</div>
 				</div>
 				<div class="messaggio-right">
-					<div class="profile">
-						<div class="imagine">
-							<img  class="img-logo" src="img 1/avatar_io.jpg" alt="logo-profile"> 
+					<div class="profile-sup" >
+						<div class="imagine" v-for="(contact,i) in contacts" v-if="i===selectIndex">
+							<img  class="img-logo" :src="contact.avatar" alt="logo-profile"> 
 							<div>
-								<div>Sofia</div>
+								<div>{{contact.name}}</div>
 								<div>ultimo accesso</div>
 							</div>
 							
@@ -71,9 +72,13 @@
 							<i class="fa-solid fa-ellipsis-vertical"></i>
 						</div>
 					</div>
-					<div class="text-chat">
-						<div class="ricevuto">testo1</div>
-						<div class="inviato">testo2</div>
+					<div class="text-chat" v-for="(contact,i) in contacts" v-if="i===selectIndex">
+						<div v-for="message in contact.messages":class="message.status==='received'? 'ricevuto':'inviato'" >
+							<div>{{message.message}}</div>
+							
+
+						</div>
+						
 					</div>
 					<div class="write-msg">
 						<i class="fa-regular fa-face-smile"></i>
