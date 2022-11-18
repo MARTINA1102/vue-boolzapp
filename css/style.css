@@ -178,3 +178,10 @@
 .active{
 	display: block;
 }
+
+.menuon{
+	background-color: white;
+	padding: 1rem;
+	color: black;
+	max-width: 10rem;
+}
