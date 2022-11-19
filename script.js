@@ -435,19 +435,20 @@ new Vue({
 			const receiverIndex=this.selectIndex;
 			if(this.newMex){
 				this.contacts[receiverIndex].messages.push({
-					date:'',
+					date:'9.35',
 					message:this.newMex,
 					status:'sent',
 					menuVisibility:false,
-				})
+				});
 				this.newMex='';	
+				
 				risposta={
-					date:'',
-					message:'OK',
-					status:'received',
-					menuVisibility:false,
-				};
-				setTimeout(() => this.contacts[this.selectIndex].messages.push(risposta), 1000);			
+						date:'9.35',
+						message:'OK',
+						status:'received',
+						menuVisibility:false,
+					}
+				setTimeout(() => this.contacts[receiverIndex].messages.push(risposta), 1000);			
 			}
 			
 		},
@@ -460,7 +461,7 @@ new Vue({
 					}
 			});
 		},
-		deleteMessage(index) {
+		deleteMessage() {
             this.contacts[this.selectedIndex].messages.splice(index, 1);
         },
 	},	
