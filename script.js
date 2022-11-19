@@ -435,7 +435,7 @@ new Vue({
 			const receiverIndex=this.selectIndex;
 			if(this.newMex){
 				this.contacts[receiverIndex].messages.push({
-					date:'9.35',
+					date:'9.35',/*luxon.DateTime.now().toFormat('HH:mm:ss'),*/
 					message:this.newMex,
 					status:'sent',
 					menuVisibility:false,
@@ -443,7 +443,7 @@ new Vue({
 				this.newMex='';	
 				
 				risposta={
-						date:'9.35',
+						date:'9.35',/*luxon.DateTime.now().toFormat('HH:mm:ss'),*/
 						message:'OK',
 						status:'received',
 						menuVisibility:false,
@@ -461,8 +461,8 @@ new Vue({
 					}
 			});
 		},
-		deleteMessage() {
-            this.contacts[this.selectedIndex].messages.splice(index, 1);
+		deleteMessage(selectIndex) {
+            this.contacts[this.selectIndex].messages.splice(selectIndex, 1);
         },
 	},	
 		

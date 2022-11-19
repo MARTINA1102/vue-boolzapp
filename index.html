@@ -75,11 +75,11 @@
 						</div>
 					</div>
 					<div class="text-chat" v-for="(contact,i) in contacts" v-if="i===selectIndex">
-						<div v-for="(message,nIndex) in contact.messages":class="message.status==='received'? 'ricevuto':'inviato'">
+						<div v-for="(message,selectIndex) in contact.messages":class="message.status==='received'? 'ricevuto':'inviato'">
 							<div>{{message.message}}</div>
 							<span class="data">{{ message.date.slice(10,16)}}</span>
 							<i  @click="message.menuVisibility=!message.menuVisibility" class="fa-solid fa-chevron-up"></i>
-							<div v-show="message.menuVisibility" @click="deleteMessage()" class="menuon">{{del}}</div>
+							<div v-show="message.menuVisibility" @click="deleteMessage(selectIndex)" class="menuon">{{del}}</div>
 							
 							
 						</div>
