@@ -435,7 +435,7 @@ new Vue({
 			const receiverIndex=this.selectIndex;
 			if(this.newMex){
 				this.contacts[receiverIndex].messages.push({
-					date:'9.35',/*luxon.DateTime.now().toFormat('HH:mm:ss'),*/
+					date:'9.35',/*newDate().toLocaleTimeString(),*/
 					message:this.newMex,
 					status:'sent',
 					menuVisibility:false,
